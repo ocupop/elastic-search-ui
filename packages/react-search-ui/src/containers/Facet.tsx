@@ -73,7 +73,7 @@ export class FacetContainer extends Component<
     const facetsForField = facets[field];
 
     if (!facetsForField) return null;
-
+    
     // By using `[0]`, we are currently assuming only 1 facet per field. This will likely be enforced
     // in future version, so instead of an array, there will only be one facet allowed per field.
     const facet = facetsForField[0];
@@ -89,7 +89,8 @@ export class FacetContainer extends Component<
       .filter((fv) => fv.selected)
       .map((fv) => fv.value);
 
-    if (!facetValues.length && !selectedValues.length) return null;
+//     if (!facetValues.length && !selectedValues.length) return null;
+    console.log('hellllo!')
 
     if (searchTerm.trim()) {
       facetValues = facetValues.filter((option) => {
